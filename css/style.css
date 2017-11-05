@@ -1,0 +1,187 @@
+@import url('reset.css');
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-size: 1.4rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#przeslona {
+	width: 100%;
+    height: 100%;
+    background-color: rgba(36, 32, 32, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+/*  notacja skrótowa  */
+/*    background: red url('../img/header.jpeg') center/cover no-repeat;*/
+    color: white;
+    line-height: 3rem;
+    position: relative;
+    overflow: hidden;
+/*    overflow: hidden; - aby wil nie wychodził poza header*/
+}
+
+header h1, header p, header .przycisk {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+    word-spacing: 0.4rem;
+    letter-spacing: 0.3rem;
+}
+
+header h1 {
+    top: 25%;
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 3rem;
+}
+
+header p {
+    top: 40%;
+    font-size: 2rem;
+    line-height: 3.5rem;
+}
+
+header .przycisk {
+    display: block;
+    top: 70%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 200px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    -webkit-box-shadow: 0 0 15px 2.5px #fff;
+    box-shadow: 0 0 15px 2.5px #fff;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    background: -webkit-gradient(linear, left top, left bottom, from(#242858), to(#a6abce));
+    background: linear-gradient(#242858, #a6abce);
+}
+
+header .przycisk:hover {
+    -webkit-box-shadow: 0 0 10px #fff;
+    box-shadow: 0 0 10px #fff;
+}
+header video {
+   position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+nav {
+    overflow: hidden;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+nav ul li a {
+    display: block;
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.5rem;
+    background-color: cornflowerblue;
+    color: #fff;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid #132b58;
+}
+
+section {
+    padding: 2rem;
+    margin-top: 4rem; 
+    min-height: 200px;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+section p {
+    line-height: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+section:nth-of-type(even) {
+    background: url('../img/tlo_sekcji.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width:620px) {
+    header {
+        height: 25vh;
+    }
+        
+    header h1 {
+        font-size: 2.2rem;
+        letter-spacing: 1.4rem;
+    }
+    
+    header p {
+        display: none;
+    }
+    
+    header .przycisk {
+        display: none;
+    }
+    
+    nav {
+       position: static;
+    }
+    
+    nav ul li a {
+        width: 100%;
+        clear: both;
+        border-bottom: 2px solid white;
+        -webkit-transition: none;
+        transition: none;
+    }
+    
+    nav ul li a:hover {
+        border-bottom: 2px solid white;
+    }
+    
+    .container {
+        width: 97%;
+    }
+}
